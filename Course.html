@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star College - Course</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #17233b;
+        }
+
+        /* HEADER */
+        header {
+            height: 130px;
+            background: linear-gradient(135deg, #063b7a, #075fc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        header img {
+            width: 105px;
+            height: 105px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 6px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #17365f;
+            font-weight: bold;
+            padding: 12px 22px;
+            border-radius: 8px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* COURSE ACTIVE */
+        nav ul li a.active {
+            background: #075fc4;
+            color: white;
+            box-shadow: 0 5px 15px rgba(7,95,196,0.3);
+        }
+
+        nav ul li a:hover {
+            background: #f5b51b;
+            color: #10213b;
+            transform: translateY(-2px);
+        }
+
+        /* COURSE BANNER */
+        .course-banner {
+            background:
+                linear-gradient(rgba(3,43,91,0.88), rgba(7,86,184,0.90)),
+                url("munir.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .course-banner h1 {
+            font-size: 52px;
+            margin-bottom: 12px;
+        }
+
+        .course-banner h1 span {
+            color: #f5b51b;
+        }
+
+        .course-banner p {
+            font-size: 18px;
+        }
+
+        /* COURSES */
+        .courses {
+            padding: 70px 8%;
+        }
+
+        .courses-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .courses-title h2 {
+            color: #063b7a;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .courses-title p {
+            color: #68778f;
+        }
+
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        /* COURSE CARD */
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            border-top: 5px solid #f5b51b;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.13);
+        }
+
+        .course-top {
+            background: linear-gradient(135deg, #063b7a, #075fc4);
+            color: white;
+            padding: 25px;
+        }
+
+        .course-top h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .course-top p {
+            color: #dcecff;
+        }
+
+        .course-body {
+            padding: 25px;
+        }
+
+        .course-body ul {
+            padding-left: 20px;
+            color: #68778f;
+            margin-bottom: 20px;
+        }
+
+        .course-body li {
+            margin-bottom: 7px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f5b51b;
+            color: #10213b;
+            padding: 12px 23px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #075fc4;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #071a33;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        footer span {
+            color: #f5b51b;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                height: 110px;
+            }
+
+            header img {
+                width: 85px;
+                height: 85px;
+            }
+
+            nav ul {
+                gap: 3px;
+                flex-wrap: wrap;
+                padding: 10px 5px;
+            }
+
+            nav ul li a {
+                padding: 9px 10px;
+                font-size: 13px;
+            }
+
+            .course-banner h1 {
+                font-size: 40px;
+            }
+
+            .course-banner p {
+                font-size: 15px;
+            }
+
+            .course-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="ii.png" alt="Star College Logo">
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+
+            <li>
+                <!-- ACTIVE COURSE -->
+                <a class="active" href="Course.html">Course</a>
+            </li>
+
+            <li>
+                <a href="Poster.html">Poster</a>
+            </li>
+
+            <li>
+                <a href="About.html">About</a>
+            </li>
+
+            <li>
+                <a href="Contect.html">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-- COURSE BANNER -->
+    <section class="course-banner">
+
+        <h1>
+            Our <span>Courses</span>
+        </h1>
+
+        <p>
+            Education • Skills • Success
+        </p>
+
+        <p>
+            Choose the right course and build your future with Star College.
+        </p>
+
+    </section>
+
+
+    <!-- COURSES -->
+    <section class="courses">
+
+        <div class="courses-title">
+            <h2>Available Courses</h2>
+
+            <p>
+                Explore our courses and develop useful skills for your future.
+            </p>
+        </div>
+
+
+        <div class="course-container">
+
+            <!-- COURSE 1 -->
+            <div class="course-card">
+
+                <div class="course-top">
+                    <h3>💻 Computer & ICT</h3>
+                    <p>Baro computer-ka si aad ula jaanqado Dunida Casriga ah.</p>
+                </div>
+
+                <div class="course-body">
+
+                    <ul>
+                        <li>Computer Basics</li>
+                        <li>Microsoft Office</li>
+                        <li>Internet </li>
+                        <li>Basic Programming</li>
+                    </ul>
+
+                    <a href="Contect.html" class="btn">
+                        Taabo oo nagu soo biir
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 2 -->
+            <div class="course-card">
+
+                <div class="course-top">
+                    <h3>📚 English Language</h3>
+                    <p> ugu hadal luuqada English si kalsoni leh.</p>
+                </div>
+
+                <div class="course-body">
+
+                    <ul>
+                        <li>English Grammar</li>
+                        <li>Speaking & Conversation</li>
+                        <li>Reading & Writing</li>
+                        <li>Vocabulary</li>
+                    </ul>
+
+                    <a href="Contect.html" class="btn">
+                        Taabo oo nagu soo biir
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 3 -->
+            <div class="course-card">
+
+    <div class="course-top">
+        <h3>💄 Beauty & Flower Design</h3>
+        <p>Baro xirfado qurux iyo hal-abuur leh.</p>
+    </div>
+
+    <div class="course-body">
+
+        <ul>
+            <li>Barashada Xinnaha</li>
+            <li>Barashada Makeup-ka</li>
+            <li>Barashada Ubaxa</li>
+            <li>Xirfadaha Qurxinta</li>
+        </ul>
+
+                    <a href="Contect.html" class="btn">
+                       Taabo oo nagu soo biir
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 4 -->
+            <div class="course-card">
+
+                <div class="course-top">
+                    <h3>🎨 Graphic Design</h3>
+                    <p> baro Skills ku kaas oo aad ku badashid naftada.</p>
+                </div>
+
+                <div class="course-body">
+
+                    <ul>
+                        <li>Design Principles</li>
+                        <li>Digital Graphics</li>
+                        <li>Branding Basics</li>
+                        <li>Creative Projects</li>
+                    </ul>
+
+                    <a href="Contect.html" class="btn">
+                        Taabo oo nagu soo biir
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>Star College</span>
+            | Education • Skills • Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

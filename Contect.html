@@ -1,0 +1,1101 @@
+
+<!DOCTYPE html>
+<html lang="so">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Xiriir - Star College</title>
+    
+</a>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #17233b;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            height: 130px;
+
+            background: linear-gradient(
+                135deg,
+                #063b7a,
+                #075fc4
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,.15);
+        }
+
+        header img {
+            width: 105px;
+            height: 105px;
+
+            object-fit: contain;
+
+            background: white;
+            border-radius: 50%;
+
+            padding: 6px;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            background: white;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+
+            color: #17365f;
+
+            font-weight: bold;
+
+            padding: 12px 22px;
+
+            border-radius: 8px;
+
+            display: block;
+
+            transition: .3s;
+        }
+
+        /* ================= ACTIVE CONTACT ================= */
+
+        nav ul li a.active {
+            background: #075fc4;
+
+            color: white;
+
+            box-shadow:
+            0 5px 15px rgba(7,95,196,.3);
+        }
+
+        nav ul li a:hover {
+            background: #f5b51b;
+
+            color: #10213b;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= HERO ================= */
+
+        .contact-hero {
+
+            min-height: 390px;
+
+            background:
+
+            linear-gradient(
+                rgba(3,43,91,.90),
+                rgba(7,86,184,.92)
+            ),
+
+            url("munir.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-logo {
+
+            width: 110px;
+            height: 110px;
+
+            object-fit: contain;
+
+            background: white;
+
+            border-radius: 50%;
+
+            padding: 7px;
+
+            margin-bottom: 20px;
+        }
+
+        .contact-hero h1 {
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-hero h1 span {
+            color: #f5b51b;
+        }
+
+        .contact-hero p {
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #e4efff;
+        }
+
+        .hero-badge {
+
+            display: inline-block;
+
+            margin-top: 22px;
+
+            background: #f5b51b;
+
+            color: #10213b;
+
+            padding: 10px 22px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= CONTACT SECTION ================= */
+
+        .contact-section {
+
+            padding: 70px 7%;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+
+            color: #063b7a;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+
+            color: #68778f;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= CONTACT GRID ================= */
+
+        .contact-container {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+            1fr 1.2fr;
+
+            gap: 30px;
+        }
+
+
+        /* ================= CONTACT INFO ================= */
+
+        .contact-info {
+
+            background:
+
+            linear-gradient(
+                135deg,
+                #063b7a,
+                #075fc4
+            );
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            box-shadow:
+            0 15px 35px rgba(0,0,0,.12);
+        }
+
+        .contact-info h2 {
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+
+            color: #dcecff;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= INFO ITEM ================= */
+
+        .info-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 17px;
+
+            margin-bottom: 25px;
+        }
+
+        .info-icon {
+
+            width: 55px;
+            height: 55px;
+
+            min-width: 55px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+            rgba(255,255,255,.15);
+
+            border-radius: 50%;
+
+            font-size: 25px;
+        }
+
+        .info-item h3 {
+
+            font-size: 16px;
+
+            margin-bottom: 5px;
+
+            color: #f5b51b;
+        }
+
+        .info-item p {
+
+            color: #edf5ff;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .contact-form {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            box-shadow:
+            0 15px 35px rgba(0,0,0,.10);
+        }
+
+        .contact-form h2 {
+
+            color: #063b7a;
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-form > p {
+
+            color: #68778f;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= INPUTS ================= */
+
+        .form-group {
+
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #17365f;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border: 1px solid #d7dfeb;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-family: Arial;
+
+            font-size: 14px;
+
+            transition: .3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: #075fc4;
+
+            box-shadow:
+            0 0 0 3px rgba(7,95,196,.10);
+        }
+
+        .form-group textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .submit-btn {
+
+            width: 100%;
+
+            border: none;
+
+            background: #f5b51b;
+
+            color: #10213b;
+
+            padding: 14px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .submit-btn:hover {
+
+            background: #075fc4;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= WHY CONTACT ================= */
+
+        .why-contact {
+
+            background: #f4f7fc;
+
+            padding: 70px 7%;
+        }
+
+        .why-grid {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .why-card {
+
+            background: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            box-shadow:
+            0 10px 30px rgba(0,0,0,.08);
+
+            transition: .3s;
+        }
+
+        .why-card:hover {
+
+            transform: translateY(-8px);
+        }
+
+        .why-card .icon {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+
+            color: #063b7a;
+
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+
+            color: #68778f;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+
+            background:
+
+            linear-gradient(
+                135deg,
+                #063b7a,
+                #075fc4
+            );
+
+            text-align: center;
+
+            color: white;
+
+            padding: 60px 20px;
+        }
+
+        .cta h2 {
+
+            font-size: 32px;
+
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+
+            color: #dcecff;
+
+            margin-bottom: 23px;
+        }
+
+        .cta a {
+
+            display: inline-block;
+
+            background: #f5b51b;
+
+            color: #10213b;
+
+            padding: 13px 28px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #071a33;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer span {
+
+            color: #f5b51b;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                height: 110px;
+            }
+
+            header img {
+
+                width: 85px;
+                height: 85px;
+            }
+
+            nav ul {
+
+                gap: 3px;
+
+                flex-wrap: wrap;
+
+                padding: 10px 5px;
+            }
+
+            nav ul li a {
+
+                padding: 9px 10px;
+
+                font-size: 13px;
+            }
+
+            .contact-hero h1 {
+
+                font-size: 36px;
+            }
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section,
+            .why-contact {
+
+                padding: 55px 5%;
+            }
+
+            .section-title h2 {
+
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <img
+            src="ii.png"
+            alt="Astaanta Star College"
+        >
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="Course.html">
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="Poster.html">
+                    Poster
+                </a>
+            </li>
+
+            <li>
+                <a href="About.html">
+                  About
+                </a>
+            </li>
+
+            <!-- ACTIVE CONTACT -->
+
+            <li>
+                <a
+                    class="active"
+                    href="Contect.html"
+                >
+                    Contect
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="contact-hero">
+
+        <div class="hero-content">
+
+            <img
+                class="hero-logo"
+                src="ii.png"
+                alt="Astaanta Star College"
+            >
+
+            <h1>
+                NALA
+                <span>SOO XIRIIR</span>
+            </h1>
+
+            <p>
+                Haddii aad rabto inaad wax badan ka ogaato
+                koorsooyinkayaga ama aad iska diiwaangeliso,
+                nala soo xiriir.
+            </p>
+
+            <div class="hero-badge">
+                📞 Waxaan diyaar u nahay inaan ku caawino
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section">
+
+        <div class="section-title">
+
+            <h2>
+                📩 Nala Soo Xiriir
+            </h2>
+
+            <p>
+                Wixii su'aalo ah ama macluumaad dheeraad ah
+                nala soo xiriir.
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h2>
+                    📞 Macluumaadka Xiriirka
+                </h2>
+
+                <p>
+                    Waxaad Star College nagala soo xiriiri
+                    kartaa adigoo adeegsanaya macluumaadka
+                    hoose.
+                </p>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cinwaanka
+                        </h3>
+
+                        <p>
+                            Star College
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Telefoon
+                        </h3>
+
+                        <p>
+                            +25263 6353950
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        📧
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            info@starcollege.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Waqtiga Shaqada
+                        </h3>
+
+                        <p>
+                            Sabti - Khamiis
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h2>
+                    ✉️ Fariin Noo Soo Dir
+                </h2>
+
+                <p>
+                    Buuxi xogta hoose, kadibna fariintaada
+                    noo soo dir.
+                </p>
+
+
+                <form>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Magacaaga
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Geli magacaaga"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email-kaaga
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="Geli email-kaaga"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Lambarka Telefoonka
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="Geli lambarkaaga"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Fariintaada
+                        </label>
+
+                        <textarea
+                            placeholder="Halkan ku qor fariintaada..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        📤 DIR FARIINTA
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CONTACT ================= -->
+
+    <section class="why-contact">
+
+        <div class="section-title">
+
+            <h2>
+                ⭐ Maxaad Nala Soo Xiriiraysaa?
+            </h2>
+
+            <p>
+                Waxaan kuu fududaynaynaa inaad hesho
+                macluumaadka aad u baahan tahay.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Isdiiwaangelin
+                </h3>
+
+                <p>
+                    Nala soo xiriir haddii aad rabto inaad
+                    iska diiwaangeliso mid ka mid ah
+                    koorsooyinkayaga.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    Su'aalo
+                </h3>
+
+                <p>
+                    Weydii wixii su'aalo ah ee ku saabsan
+                    koorsooyinka iyo waxbarashada.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    💡
+                </div>
+
+                <h3>
+                    Macluumaad
+                </h3>
+
+                <p>
+                    Hel macluumaad dheeraad ah oo ku saabsan
+                    Star College iyo fursadaha waxbarasho.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>
+            🚀 Bilow Mustaqbalkaaga Maanta!
+        </h2>
+
+        <p>
+            Dooro koorsada kugu habboon oo bilow
+            safarkaaga waxbarasho.
+        </p>
+
+        <a href="Course.html">
+            EEG KOORSOOYINKA
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026
+
+            <span>
+                Star College
+            </span>
+
+            |
+
+            Waxbarasho • Xirfad • Guul
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```

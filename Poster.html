@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Star College - Poster</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #17233b;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            height: 130px;
+
+            background: linear-gradient(
+                135deg,
+                #063b7a,
+                #075fc4
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,.15);
+        }
+
+        header img {
+            width: 105px;
+            height: 105px;
+
+            object-fit: contain;
+
+            background: white;
+            border-radius: 50%;
+
+            padding: 6px;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            background: white;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+
+            color: #17365f;
+
+            font-weight: bold;
+
+            padding: 12px 22px;
+
+            border-radius: 8px;
+
+            display: block;
+
+            transition: .3s;
+        }
+
+        /* ACTIVE POSTER */
+
+        nav ul li a.active {
+            background: #075fc4;
+
+            color: white;
+
+            box-shadow:
+            0 5px 15px rgba(7,95,196,.3);
+        }
+
+        nav ul li a:hover {
+            background: #f5b51b;
+
+            color: #10213b;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= MAIN POSTER ================= */
+
+        .poster-section {
+            padding: 70px 7%;
+        }
+
+        .poster {
+            max-width: 1000px;
+
+            margin: auto;
+
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+            0 15px 40px rgba(0,0,0,.15);
+        }
+
+
+        /* ================= POSTER HEADER ================= */
+
+        .poster-top {
+
+            background:
+
+            linear-gradient(
+                rgba(3,43,91,.90),
+                rgba(7,86,184,.92)
+            ),
+
+            url("munir.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 60px 25px;
+        }
+
+        .poster-top img {
+
+            width: 120px;
+            height: 120px;
+
+            object-fit: contain;
+
+            background: white;
+
+            border-radius: 50%;
+
+            padding: 7px;
+
+            margin-bottom: 18px;
+
+            box-shadow:
+            0 12px 30px rgba(0,0,0,.25);
+        }
+
+        .poster-top h1 {
+
+            font-size: 48px;
+
+            margin-bottom: 8px;
+        }
+
+        .poster-top h1 span {
+            color: #f5b51b;
+        }
+
+        .poster-top p {
+            color: #e4efff;
+
+            margin-top: 7px;
+
+            font-size: 16px;
+        }
+
+        .poster-top h2 {
+
+            display: inline-block;
+
+            margin-top: 22px;
+
+            background: #f5b51b;
+
+            color: #10213b;
+
+            padding: 9px 20px;
+
+            border-radius: 30px;
+
+            font-size: 20px;
+        }
+
+
+        /* ================= FOUR COURSE POSTERS ================= */
+
+        .course-posters {
+
+            padding: 70px 7%;
+
+            background: #f4f7fc;
+        }
+
+        .poster-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .poster-title h2 {
+
+            color: #063b7a;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .poster-title p {
+
+            color: #68778f;
+
+            font-size: 16px;
+        }
+
+
+        /* GRID */
+
+        .poster-grid {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+
+        /* EACH POSTER */
+
+        .mini-poster {
+
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 410px;
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            color: white;
+
+            text-align: center;
+
+            box-shadow:
+            0 15px 35px rgba(0,0,0,.12);
+
+            transition: .35s;
+        }
+
+        .mini-poster:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+            0 22px 45px rgba(0,0,0,.18);
+        }
+
+
+        /* DECORATION */
+
+        .mini-poster::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 190px;
+            height: 190px;
+
+            border:
+            2px solid rgba(255,255,255,.15);
+
+            border-radius: 50%;
+
+            top: -90px;
+            right: -70px;
+        }
+
+        .mini-poster::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            border:
+            2px solid rgba(255,255,255,.12);
+
+            border-radius: 50%;
+
+            bottom: -60px;
+            left: -50px;
+        }
+
+
+        /* ICON */
+
+        .poster-icon {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 80px;
+            height: 80px;
+
+            margin:
+            0 auto 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+            rgba(255,255,255,.18);
+
+            border:
+            1px solid rgba(255,255,255,.3);
+
+            border-radius: 50%;
+
+            font-size: 38px;
+        }
+
+
+        /* COURSE TITLE */
+
+        .mini-poster h2 {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 27px;
+
+            margin-bottom: 12px;
+        }
+
+        .mini-poster p {
+
+            position: relative;
+
+            z-index: 2;
+
+            color:
+            rgba(255,255,255,.92);
+
+            line-height: 1.7;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* COURSE DETAILS */
+
+        .poster-list {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns:
+            1fr 1fr;
+
+            gap: 9px;
+
+            margin-bottom: 27px;
+        }
+
+        .poster-list span {
+
+            background:
+            rgba(255,255,255,.14);
+
+            padding: 9px 5px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+        }
+
+
+        /* BUTTON */
+
+        .mini-poster a {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: inline-block;
+
+            background: #f5b51b;
+
+            color: #10213b;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .mini-poster a:hover {
+
+            background: white;
+
+            transform: scale(1.05);
+        }
+
+
+        /* ================= DIFFERENT COURSE COLORS ================= */
+
+        .computer {
+
+            background:
+            linear-gradient(
+                135deg,
+                #062d61,
+                #0874d1
+            );
+        }
+
+        .english {
+
+            background:
+            linear-gradient(
+                135deg,
+                #193d72,
+                #246bb4
+            );
+        }
+
+        .beauty {
+
+            background:
+            linear-gradient(
+                135deg,
+                #7b315e,
+                #c75b88
+            );
+        }
+
+        .design {
+
+            background:
+            linear-gradient(
+                135deg,
+                #173c5c,
+                #0b83a5
+            );
+        }
+
+
+        /* ================= REGISTER ================= */
+
+        .register {
+
+            background:
+            linear-gradient(
+                135deg,
+                #063b7a,
+                #075fc4
+            );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+        }
+
+        .register h2 {
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+        .register p {
+
+            margin-bottom: 22px;
+
+            color: #dcecff;
+        }
+
+        .register a {
+
+            display: inline-block;
+
+            background: #f5b51b;
+
+            color: #10213b;
+
+            padding: 13px 27px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .register a:hover {
+
+            background: white;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #071a33;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer span {
+            color: #f5b51b;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                height: 110px;
+            }
+
+            header img {
+
+                width: 85px;
+                height: 85px;
+            }
+
+            nav ul {
+
+                gap: 3px;
+
+                flex-wrap: wrap;
+
+                padding: 10px 5px;
+            }
+
+            nav ul li a {
+
+                padding: 9px 10px;
+
+                font-size: 13px;
+            }
+
+            .poster-top h1 {
+
+                font-size: 37px;
+            }
+
+            .poster-top h2 {
+
+                font-size: 17px;
+            }
+
+            .poster-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .course-posters {
+
+                padding: 55px 5%;
+            }
+
+            .poster-title h2 {
+
+                font-size: 30px;
+            }
+
+            .mini-poster {
+
+                min-height: auto;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <img
+            src="ii.png"
+            alt="Star College Logo"
+        >
+
+    </header>
+
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="Course.html">
+                    Course
+                </a>
+            </li>
+
+            <!-- ACTIVE -->
+
+            <li>
+                <a
+                    class="active"
+                    href="Poster.html"
+                >
+                    Poster
+                </a>
+            </li>
+
+            <li>
+                <a href="About.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="Contect.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN POSTER ================= -->
+
+    <section class="poster-section">
+
+        <div class="poster">
+
+
+            <div class="poster-top">
+
+                <img
+                    src="ii.png"
+                    alt="Star College Logo"
+                >
+
+                <h1>
+                    STAR
+                    <span>COLLEGE</span>
+                </h1>
+
+                <p>
+                    Education • Skills • Success
+                </p>
+
+                <h2>
+                    🎓 COURSES ARE OPEN!
+                </h2>
+
+                <p>
+                    Join Star College today and learn
+                    a new skill for your future.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= FOUR POSTERS ================= -->
+
+            <section class="course-posters">
+
+
+                <div class="poster-title">
+
+                    <h2>
+                        ✨ Our Courses ✨
+                    </h2>
+
+                    <p>
+                       Dooro koorsadaada oo dhis mustaqbalkaaga adoo la kaashanaya Star College.
+                    </p>
+
+                </div>
+
+
+
+                <div class="poster-grid">
+
+
+                    <!-- ================= COURSE 1 ================= -->
+
+                    <div class="mini-poster computer">
+
+                        <div class="poster-icon">
+                            💻
+                        </div>
+
+                        <h2>
+                            COMPUTER & ICT
+                        </h2>
+
+                        <p>
+                           Baro xirfadaha kombiyuutarka casriga
+                            ah oo isku diyaari aduunka dijitaalka ah ee maanta.
+                        </p>
+
+                        <div class="poster-list">
+
+                            <span>
+                                ✓ Computer Basics
+                            </span>
+
+                            <span>
+                                ✓ Microsoft Office
+                            </span>
+
+                            <span>
+                                ✓ Internet Skills
+                            </span>
+
+                            <span>
+                                ✓ Basic Programming
+                            </span>
+
+                        </div>
+
+                        <a href="Contect.html">
+                            ENROLL NOW
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ================= COURSE 2 ================= -->
+
+                    <div class="mini-poster english">
+
+                        <div class="poster-icon">
+                            📚
+                        </div>
+
+                        <h2>
+                            ENGLISH LANGUAGE
+                        </h2>
+
+                        <p>
+                          Hagaaji xiriirkaaga English-ka oo noqda mid kalsooni badan.
+                        </p>
+
+                        <div class="poster-list">
+
+                            <span>
+                                ✓ Grammar
+                            </span>
+
+                            <span>
+                                ✓ Speaking
+                            </span>
+
+                            <span>
+                                ✓ Reading
+                            </span>
+
+                            <span>
+                                ✓ Writing
+                            </span>
+
+                        </div>
+
+                        <a href="Contect.html">
+                            ENROLL NOW
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ================= COURSE 3 ================= -->
+
+                    <div class="mini-poster beauty">
+
+                        <div class="poster-icon">
+                            💄🌸
+                        </div>
+
+                        <h2>
+                            BEAUTY & DECORATION
+                        </h2>
+
+                        <p>
+                            Baro xirfadaha qurxinta
+                            iyo hal-abuurka kuwaas oo
+                            kuu noqon kara xirfad shaqo.
+                        </p>
+
+                        <div class="poster-list">
+
+                            <span>
+                                ✓ Barashada Xinnaha
+                            </span>
+
+                            <span>
+                                ✓ Makeup-ka
+                            </span>
+
+                            <span>
+                                ✓ Barashada Ubaxa
+                            </span>
+
+                            <span>
+                                ✓ Xirfadaha Qurxinta
+                            </span>
+
+                        </div>
+
+                        <a href="Contect.html">
+                            ENROLL NOW
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ================= COURSE 4 ================= -->
+
+                    <div class="mini-poster design">
+
+                        <div class="poster-icon">
+                            🎨
+                        </div>
+
+                        <h2>
+                            GRAPHIC DESIGN
+                        </h2>
+
+                        <p>
+                           Fikradahaaga u beddel naqshadaha dijitaalka qurxoon oo 
+                           horumari xirfadahaaga hal-abuurka.
+                        </p>
+
+                        <div class="poster-list">
+
+                            <span>
+                                ✓ Design Principles
+                            </span>
+
+                            <span>
+                                ✓ Digital Graphics
+                            </span>
+
+                            <span>
+                                ✓ Logo Design
+                            </span>
+
+                            <span>
+                                ✓ Creative Projects
+                            </span>
+
+                        </div>
+
+                        <a href="Contect.html">
+                            ENROLL NOW
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= REGISTER ================= -->
+
+            <div class="register">
+
+                <h2>
+                    📢 REGISTER NOW!
+                </h2>
+
+                <p>
+                    Don't miss this opportunity
+                    to learn new skills.
+                </p>
+
+                <a href="Contect.html">
+                    CONTACT US
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026
+
+            <span>
+                Star College
+            </span>
+
+            |
+
+            Education • Skills • Success
+
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star College - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #17233b;
+        }
+
+        /* HEADER / LOGO */
+        header {
+            height: 130px;
+            background: linear-gradient(135deg, #063b7a, #075fc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        header img {
+            width: 105px;
+            height: 105px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 6px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #17365f;
+            font-weight: bold;
+            padding: 12px 22px;
+            border-radius: 8px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* ACTIVE PAGE */
+        nav ul li a.active {
+            background: #075fc4;
+            color: white;
+            box-shadow: 0 5px 15px rgba(7,95,196,0.3);
+        }
+
+        nav ul li a:hover {
+            background: #f5b51b;
+            color: #10213b;
+            transform: translateY(-2px);
+        }
+
+        /* HOME */
+        .hero {
+            min-height: 520px;
+            background:
+                linear-gradient(rgba(3,43,91,0.82), rgba(7,86,184,0.88)),
+                url("munir.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: #f5b51b;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #ffd45e;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f5b51b;
+            color: #10213b;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* CARDS */
+        .features {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #063b7a;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-top: 4px solid #f5b51b;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #075fc4;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #68778f;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #071a33;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer span {
+            color: #f5b51b;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                height: 110px;
+            }
+
+            header img {
+                width: 85px;
+                height: 85px;
+            }
+
+            nav ul {
+                gap: 3px;
+                flex-wrap: wrap;
+                padding: 10px 5px;
+            }
+
+            nav ul li a {
+                padding: 9px 10px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="ii.png" alt="Star College Logo">
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li>
+                <a class="active" href="home.html">Home</a>
+            </li>
+
+            <li>
+                <a href="Course.html">Course</a>
+            </li>
+
+            <li>
+                <a href="Poster.html">Poster</a>
+            </li>
+
+            <li>
+                <a href="About.html">About</a>
+            </li>
+
+            <li>
+                <a href="Contect.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <h2>WELCOME TO</h2>
+
+            <h1>
+                STAR <span>COLLEGE</span>
+            </h1>
+
+            <p>
+                Education • Skills • Success
+            </p>
+
+            <p>
+                Welcome to Star College, where knowledge meets
+                skills and students build a successful future.
+            </p>
+
+            <a href="Course.html" class="btn">
+                Explore Our Courses
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <h2>ku so biir  Star College?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🎓</div>
+                <h3>Quality Education</h3>
+                <p>
+                    waxad ka helaysaa  waxbarasho tayo leh ooku an facda .
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Practical Skills</h3>
+                <p>
+                    waxad heysaa practical skills tayo leh 
+                    oo ku soo jiidasho leh.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⭐</div>
+                <h3>Student Success</h3>
+                <p>
+                    Nagu soo biir oo guulayso sidii kuwii ka horeyay.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 <span>Star College</span> |
+            Education • Skills • Success
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1070 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Star College</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #17233b;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            height: 130px;
+            background: linear-gradient(135deg, #063b7a, #075fc4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,.15);
+        }
+
+        header img {
+            width: 105px;
+            height: 105px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 6px;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #17365f;
+            font-weight: bold;
+            padding: 12px 22px;
+            border-radius: 8px;
+            display: block;
+            transition: .3s;
+        }
+
+        /* ACTIVE ABOUT */
+
+        nav ul li a.active {
+            background: #075fc4;
+            color: white;
+            box-shadow: 0 5px 15px rgba(7,95,196,.3);
+        }
+
+        nav ul li a:hover {
+            background: #f5b51b;
+            color: #10213b;
+            transform: translateY(-2px);
+        }
+
+        /* ================= HERO ================= */
+
+        .about-hero {
+            min-height: 430px;
+
+            background:
+                linear-gradient(
+                    rgba(3,43,91,.88),
+                    rgba(7,86,184,.90)
+                ),
+                url("munir.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 70px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-logo {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 7px;
+            margin-bottom: 20px;
+
+            box-shadow: 0 12px 30px rgba(0,0,0,.25);
+        }
+
+        .about-hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .about-hero h1 span {
+            color: #f5b51b;
+        }
+
+        .about-hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #e6f0ff;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 25px;
+            background: #f5b51b;
+            color: #10213b;
+            padding: 11px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        /* ================= SECTION ================= */
+
+        .section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #063b7a;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #68778f;
+            font-size: 16px;
+        }
+
+        /* ================= ABOUT INTRO ================= */
+
+        .about-container {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+
+            align-items: stretch;
+        }
+
+        .about-card {
+            background: white;
+            padding: 38px;
+            border-radius: 20px;
+
+            box-shadow: 0 12px 35px rgba(0,0,0,.09);
+
+            transition: .3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(0,0,0,.13);
+        }
+
+        .about-icon {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #eaf3ff;
+            border-radius: 50%;
+
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .about-card h2 {
+            color: #063b7a;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
+
+        .about-card p {
+            color: #5d6b80;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* ================= MISSION VISION ================= */
+
+        .mv-section {
+            background: #f4f7fc;
+        }
+
+        .mv-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .mv-card {
+            padding: 40px;
+            border-radius: 22px;
+            color: white;
+
+            min-height: 250px;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,.12);
+
+            transition: .3s;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .mission {
+            background: linear-gradient(135deg, #063b7a, #0874d1);
+        }
+
+        .vision {
+            background: linear-gradient(135deg, #173c5c, #0b83a5);
+        }
+
+        .mv-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .mv-card h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .mv-card p {
+            line-height: 1.8;
+            color: rgba(255,255,255,.9);
+        }
+
+        /* ================= VALUES ================= */
+
+        .values-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .value-card {
+            background: white;
+            text-align: center;
+            padding: 30px 20px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+            transition: .3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .value-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+            color: #063b7a;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: #68778f;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ================= STATISTICS ================= */
+
+        .stats {
+            background: linear-gradient(
+                135deg,
+                #063b7a,
+                #075fc4
+            );
+
+            color: white;
+            padding: 60px 7%;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 20px;
+        }
+
+        .stat h2 {
+            font-size: 42px;
+            color: #f5b51b;
+            margin-bottom: 8px;
+        }
+
+        .stat p {
+            color: #e2efff;
+            font-size: 15px;
+        }
+
+        /* ================= COURSES ================= */
+
+        .course-box {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .course {
+            background: white;
+            padding: 28px 20px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+            transition: .3s;
+        }
+
+        .course:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0,0,0,.13);
+        }
+
+        .course span {
+            font-size: 38px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .course h3 {
+            color: #063b7a;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .course p {
+            color: #68778f;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    135deg,
+                    #063b7a,
+                    #075fc4
+                );
+
+            text-align: center;
+            color: white;
+            padding: 65px 20px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            color: #dcecff;
+            margin-bottom: 25px;
+        }
+
+        .cta a {
+            display: inline-block;
+
+            background: #f5b51b;
+            color: #10213b;
+
+            padding: 14px 30px;
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .cta a:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #071a33;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer span {
+            color: #f5b51b;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                height: 110px;
+            }
+
+            header img {
+                width: 85px;
+                height: 85px;
+            }
+
+            nav ul {
+                gap: 3px;
+                flex-wrap: wrap;
+                padding: 10px 5px;
+            }
+
+            nav ul li a {
+                padding: 9px 10px;
+                font-size: 13px;
+            }
+
+            .about-hero h1 {
+                font-size: 38px;
+            }
+
+            .about-hero p {
+                font-size: 15px;
+            }
+
+            .about-container,
+            .mv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid,
+            .course-box {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section {
+                padding: 55px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .values-grid,
+            .course-box,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero {
+                min-height: 400px;
+            }
+
+            .about-hero h1 {
+                font-size: 32px;
+            }
+
+            .about-card,
+            .mv-card {
+                padding: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <img
+            src="ii.png"
+            alt="Star College Logo"
+        >
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="Course.html">
+                    Course
+                </a>
+            </li>
+
+            <li>
+                <a href="Poster.html">
+                    Poster
+                </a>
+            </li>
+
+            <!-- ACTIVE ABOUT -->
+
+            <li>
+                <a
+                    class="active"
+                    href="About.html"
+                >
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="Contect.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="hero-content">
+
+            <img
+                class="hero-logo"
+                src="ii.png"
+                alt="Star College Logo"
+            >
+
+            <h1>
+                ABOUT
+                <span>STAR COLLEGE</span>
+            </h1>
+
+            <p>
+               Kusoo dhawow Kulliyadda Star — meel ay waxbarashada, xirfadaha iyo 
+               hal-abuurku iskugu yimaadaan si loo dhiso mustaqbal ifaya.
+            </p>
+
+            <div class="hero-badge">
+                🎓 Education • Skills • Success
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHO WE ARE ================= -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>
+                ✨Yaa Naga Mid Ah
+            </h2>
+
+            <p>
+               Wax badan ka baro Star College
+            </p>
+
+        </div>
+
+
+        <div class="about-container">
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🏫
+                </div>
+
+                <h2>
+                    About Star College
+                </h2>
+
+                <p>
+                    Star College waa xarun waxbarasho oo
+                    diiradda saarta horumarinta aqoonta,
+                    xirfadaha iyo hal-abuurka ardayda.
+                    Waxaan bixinnaa koorsooyin practical ah
+                    oo ka caawinaya ardayda inay helaan
+                    xirfado ay mustaqbalkooda ku dhistaan.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🌟
+                </div>
+
+                <h2>
+                    Why Choose Us?
+                </h2>
+
+                <p>
+                    Star College waxay ardayda siisaa jawi
+                    waxbarasho oo wanaagsan, casharro la fahmi
+                    karo iyo xirfado casri ah. Ujeeddadeennu
+                    waa in arday kasta uu helo aqoon iyo
+                    kalsooni uu mustaqbalkiisa ku horumariyo.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MISSION & VISION ================= -->
+
+    <section class="section mv-section">
+
+        <div class="section-title">
+
+            <h2>
+                🎯 Mission & Vision
+            </h2>
+
+            <p>
+                Our direction and purpose
+            </p>
+
+        </div>
+
+
+        <div class="mv-grid">
+
+
+            <div class="mv-card mission">
+
+                <div class="mv-icon">
+                    🎯
+                </div>
+
+                <h2>
+                    Our Mission
+                </h2>
+
+                <p>
+                    Inaan ardayda siino waxbarasho tayo leh,
+                    xirfado practical ah iyo fursado ay ku
+                    horumarin karaan aqoontooda iyo mustaqbalkooda.
+                </p>
+
+            </div>
+
+
+            <div class="mv-card vision">
+
+                <div class="mv-icon">
+                    👁️
+                </div>
+
+                <h2>
+                    Our Vision
+                </h2>
+
+                <p>
+                    Inaan noqono xarun waxbarasho oo hormuud
+                    u ah horumarinta aqoonta, xirfadaha iyo
+                    hal-abuurka jiilka cusub.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= VALUES ================= -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>
+                💎 Our Core Values
+            </h2>
+
+            <p>
+                Qiimayaasha hageya Star College
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Education
+                </h3>
+
+                <p>
+                    Waxaan qiimeynaa aqoon tayo leh
+                    iyo waxbarasho joogto ah.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Creativity
+                </h3>
+
+                <p>
+                    Waxaan dhiirrigelinnaa hal-abuurka
+                    iyo fikradaha cusub.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Respect
+                </h3>
+
+                <p>
+                    Waxaan dhisnaa jawi ku saleysan
+                    ixtiraam iyo wada shaqeyn.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Excellence
+                </h3>
+
+                <p>
+                    Waxaan ku dadaalnaa heer sare
+                    iyo horumar joogto ah.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats">
+
+        <div class="stats-grid">
+
+
+            <div class="stat">
+
+                <h2>
+                    4+
+                </h2>
+
+                <p>
+                    Professional Courses
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h2>
+                    100+
+                </h2>
+
+                <p>
+                    Learning Opportunities
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h2>
+                    2026
+                </h2>
+
+                <p>
+                    New Learning Journey
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h2>
+                    100%
+                </h2>
+
+                <p>
+                    Commitment to Learning
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COURSES ================= -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>
+                📚 Waxaan Bixinaa
+            </h2>
+
+            <p>
+               Horumari xirfado faa’iido leh oo mustaqbalkaaga ah
+            </p>
+
+        </div>
+
+
+        <div class="course-box">
+
+
+            <div class="course">
+
+                <span>
+                    💻
+                </span>
+
+                <h3>
+                    Computer & ICT
+                </h3>
+
+                <p>
+                   Aasaaska kombiyuutarka, Microsoft Office, xirfadaha internetka iyo barnaamijyada.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <span>
+                    📚
+                </span>
+
+                <h3>
+                    English Language
+                </h3>
+
+                <p>
+                   Hagaaji naxwahaaga, hadalkaaga, akhriskaaga iyo xirfadahaaga qorista.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <span>
+                    💄
+                </span>
+
+                <h3>
+                    Beauty & Decoration
+                </h3>
+
+                <p>
+                    Baro xirfadaha quruxda, xinna, makeup-ka, ubaxa iyo qurxinta.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <span>
+                    🎨
+                </span>
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                 Fikradahaaga u beddel naqshado iyo garaafyo dijitaal oo hal-abuur leh.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>
+            🚀 Bilow Safarkaaga Barashada Maanta!
+        </h2>
+
+        <p>
+           Dooro koorsadaada oo dhis xirfadaha aad u baahan tahay mustaqbalkaaga.
+        </p>
+
+        <a href="Contect.html">
+            CONTACT US
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026
+
+            <span>
+                Star College
+            </span>
+
+            |
+
+            Education • Skills • Success
+
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+```
